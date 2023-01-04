@@ -9,9 +9,10 @@ class Program
         int grade = int.Parse(userInput);
         string letterGrade = null;
         string plusMinus = null;
-
+        //Will validate if input is a valid number between 0 and 100.
         if (grade >= 0 && grade <=100)
         {
+            //If grade is within valid range this will assign letter grade accordingly.
             if (grade<60)
             {
                 letterGrade = "F";
@@ -28,10 +29,12 @@ class Program
             {
                 letterGrade = "D";
             }
+        //This will alert the user of an invalid input.
         }else{
             Console.WriteLine("Not a valid grade. Enter a number between 0 and 100.");
             return;
         }
+        //This determines if a plus or minus sign is needed and assigns it.
         if (grade > 60 && grade < 93)
         {
             if ((grade%10)>=3)
@@ -39,7 +42,7 @@ class Program
                 plusMinus = "+";
             }else{plusMinus = "-";}
         }
-
+        //This will output final letter grade with plus/minus sign and a failed/pass message.
         Console.Write($"Your letter grade is {letterGrade}{plusMinus}");
         if (grade < 70)
         {
