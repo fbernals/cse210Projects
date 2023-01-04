@@ -10,7 +10,7 @@ class Program
         string letterGrade = null;
         string plusMinus = null;
 
-        if (grade <= 100)
+        if (grade >= 0 && grade <=100)
         {
             if (grade<60)
             {
@@ -29,7 +29,7 @@ class Program
                 letterGrade = "D";
             }
         }else{
-            Console.WriteLine("Not a valid number. Enter a number between 1 and 100.");
+            Console.WriteLine("Not a valid grade. Enter a number between 0 and 100.");
             return;
         }
         if (grade > 60 && grade < 93)
