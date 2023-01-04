@@ -14,6 +14,7 @@ class Program
             Random rNumber = new Random();
             int number = rNumber.Next(1,10); //Generates a number between 1 and 10 for the user to guess it
             counter = 0; //Resets counter to 0
+            
             while (guess != number)
             {
                 //Asks user for a guess and assigns its value to variable 'guess'
@@ -32,6 +33,7 @@ class Program
                 {
                     Console.WriteLine("Lower");
                     counter++;
+                    
                 }else if (guess == number)
                 {   
                     //Notifies the user of a correct guess and asks if user wants to try again.
