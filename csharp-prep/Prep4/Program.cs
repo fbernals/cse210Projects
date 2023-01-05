@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Declares variables and initialize them.
         List<int> numbers = new List<int>();
         int number = 0;
         int total = 0;
@@ -14,7 +15,7 @@ class Program
 
         do
         {
-
+            //While value is not 0 asks user for input and ads them to the list
             Console.Write("Enter a number: ");
             string userInput = Console.ReadLine();
             number = int.Parse(userInput);
@@ -32,12 +33,13 @@ class Program
         for (int i = 0; i < numbers.Count; i++)
         {
 
-        Console.WriteLine(numbers[i]);
-        total = numbers.Sum();
-        average = numbers.Average();
-        maximum = numbers.Max();
+        Console.WriteLine(numbers[i]); //Prints each number from the list
+        total = numbers.Sum(); //Sums up all the numbers
+        average = numbers.Average(); //Gets the average of all values
+        maximum = numbers.Max(); //Gets the maximum value from the list
         if (numbers[i] > 0)
         {
+            //Gets the minimum positive value from the list
             minimum = numbers[i];
             if (minimum < aMinimum)
             {
@@ -47,7 +49,7 @@ class Program
         }
 
         }
-
+        //Sorts and prints list´s values and requested operations results.
         numbers.Sort();
 
         Console.WriteLine($"The sum of all list items is {total}");
@@ -57,7 +59,7 @@ class Program
         Console.WriteLine("This is the sorted list:");
         foreach(int item in numbers)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item); //Prints sorted list.
         }
 
     }
