@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        DisplayWelcome(); //Dsiplays a welcome message.
+        DisplayWelcome(); //Displays a welcome message.
         string uName = GetUserName(); //Calls a function to prompt for user name.
         int number = GetUserNumber(); //Prompts for a number.
         int square = SquareNumber(number); //Squares the number received.
